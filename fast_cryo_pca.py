@@ -24,7 +24,7 @@ class FastPCA:
     def _build(self):
 
         if self.basis is None:
-            from fle_2d_new import FLEBasis2D
+            from fle_2d_single import FLEBasis2D
             self.basis = FLEBasis2D(self.src.L, self.src.L, eps=1e-3)
 
         self.h_ctf = self.src.unique_filters

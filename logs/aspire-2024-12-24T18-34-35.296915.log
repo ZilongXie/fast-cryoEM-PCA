@@ -1,0 +1,43 @@
+2024-12-24 18:34:35,300 DEBUG [root] ASPIRE configuration directory is C:\Users\Zilong Xie\AppData\Roaming\ASPIRE
+2024-12-24 18:34:35,300 DEBUG [root] ASPIRE configuration resolution details [({'logging': {'log_dir': 'E:/!cryo-EM!/fast-cryoEM-PCA/logs'}}, ConfigSource(<super: <class 'ConfigSource'>, <ConfigSource object>>, None, False, False)), ({}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, 'C:\\Users\\Zilong Xie\\AppData\\Roaming\\ASPIRE\\config.yaml', False, False)), ({'version': '0.13.1', 'common': OrderedDict([('numeric', 'numpy'), ('fft', 'scipy'), ('cache_dir', '')]), 'logging': OrderedDict([('log_dir', 'logs'), ('log_exceptions', 1), ('tqdm_disable', False), ('console_level', 'INFO'), ('log_file_level', 'DEBUG'), ('log_prefix', 'aspire')]), 'nufft': OrderedDict([('backends', ['cufinufft', 'finufft', 'pynfft'])])}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, 'E:\\!cryo-EM!\\ASPIRE-Python\\src\\aspire\\config_default.yaml', True, False))]
+2024-12-24 18:34:35,302 DEBUG [root] Resolved config.yaml:
+
+logging:
+    log_dir: E:/!cryo-EM!/fast-cryoEM-PCA/logs
+    log_exceptions: 1
+    tqdm_disable: no
+    console_level: INFO
+    log_file_level: DEBUG
+    log_prefix: aspire
+version: 0.13.1
+common:
+    numeric: numpy
+    fft: scipy
+    cache_dir: ''
+
+nufft:
+    backends: [cufinufft, finufft, pynfft]
+
+
+2024-12-24 18:34:35,528 DEBUG [matplotlib] matplotlib data path: C:\Users\Zilong Xie\.conda\envs\cryoEM\lib\site-packages\matplotlib\mpl-data
+2024-12-24 18:34:35,533 DEBUG [matplotlib] CONFIGDIR=C:\Users\Zilong Xie\.matplotlib
+2024-12-24 18:34:35,534 DEBUG [matplotlib] interactive is False
+2024-12-24 18:34:35,534 DEBUG [matplotlib] platform is win32
+2024-12-24 18:34:35,593 DEBUG [matplotlib] CACHEDIR=C:\Users\Zilong Xie\.matplotlib
+2024-12-24 18:34:35,595 DEBUG [matplotlib.font_manager] Using fontManager instance from C:\Users\Zilong Xie\.matplotlib\fontlist-v390.json
+2024-12-24 18:34:37,057 INFO [aspire.source.relion] Creating ImageSource from STAR file at path ./data/particle_stacks/data.star
+2024-12-24 18:34:37,057 INFO [aspire.storage.starfile] Parsing star file at: ./data/particle_stacks/data.star
+2024-12-24 18:34:37,503 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2024-12-24 18:34:41,561 CRITICAL [root] [Errno 2] No such file or directory: './data/particle_stacks\\./data\\Particles/micrographs/HCN1apo_0002_2xaligned_particles_shiny.mrcs'
+Traceback:
+  File "E:\!cryo-EM!\fast-cryoEM-PCA\demo_experimental_data_10081.py", line 25, in <module>
+    source = RelionSource(
+  File "E:\!cryo-EM!\ASPIRE-Python\src\aspire\source\relion.py", line 74, in __init__
+    mrc = mrcfile.open(first_mrc_filepath)
+  File "C:\Users\Zilong Xie\.conda\envs\cryoEM\lib\site-packages\mrcfile\load_functions.py", line 145, in open
+    return NewMrc(name, mode=mode, permissive=permissive,
+  File "C:\Users\Zilong Xie\.conda\envs\cryoEM\lib\site-packages\mrcfile\mrcfile.py", line 109, in __init__
+    self._open_file(name)
+  File "C:\Users\Zilong Xie\.conda\envs\cryoEM\lib\site-packages\mrcfile\mrcfile.py", line 126, in _open_file
+    self._iostream = open(name, self._mode + 'b')
+
